@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
   "private": true,
+  "jest": {
+    "verbose": true
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "webpack",
     "start": "webpack serve --open"
   },
@@ -29,6 +32,8 @@
     "hint": "^7.1.1",
     "html-loader": "^4.1.0",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.5.1",
+    "jest-environment-jsdom": "^27.5.1",
     "style-loader": "^3.3.1",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
