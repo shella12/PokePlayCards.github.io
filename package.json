@@ -2,10 +2,10 @@
   "name": "capstone2",
   "version": "1.0.0",
   "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
-  "private":true,
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"webpack",
+    "build": "webpack",
     "start": "webpack serve --open"
   },
   "repository": {
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/shella12/capstone2#readme",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.18.6",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.1",
     "eslint": "^7.32.0",
