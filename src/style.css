@@ -24,6 +24,7 @@ nav ul li:nth-child(1) {
   border: 1px solid;
   border-radius: 50%;
   padding: 1rem 1.4rem;
+  text-align: center;
 }
 
 nav ul li:nth-child(2) {
@@ -36,6 +37,51 @@ nav ul li a{
   color: #000;
 }
 
+/* main */
+.main{
+    padding: auto;
+    background-color: rgb(247, 151, 6);
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap:1.5rem;
+    margin: 3rem;
+    }
+    
+    .card{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+    
+    .card .pokemon-img{
+        border:1px solid black ;
+        border-radius: 2px;
+    }
+    
+    .card .card-title{
+        display: flex;
+        padding: 0 1rem;
+    }
+    
+    .card .card-title img{
+        margin-left: auto;
+        gap: 1rem;
+    }
+    
+    .card .like-count{
+        align-self: flex-end;
+        margin-bottom: 0.7rem;
+    }
+    .card .buttons button{
+        font-size: 1rem;
+        padding: .3rem .9rem;
+        margin: 5px;
+    }
+        
+/* footer */
 .footer {
   width: 100%;
   border-top: 2px solid;
