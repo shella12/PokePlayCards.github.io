@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
+  background-color: rgb(255, 255, 255);
+}
+
+nav {
+  width: 70%;
+  margin: 2rem;
+  padding-left: 2rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  align-items: baseline;
+  font-size: 1.2rem;
+}
+
+nav ul li:nth-child(1) {
+  border: 1px solid;
+  border-radius: 50%;
+  padding: 1rem 1.4rem;
+  text-align: center;
+}
+
+nav ul li:nth-child(2) {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* main */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.card .pokemon-img {
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+.card .card-title {
+  display: flex;
+  padding: 0 1rem;
+}
+
+.card .card-title img {
+  margin-left: auto;
+  gap: 1rem;
+}
+
+.card .like-count {
+  align-self: flex-end;
+  margin-bottom: 0.7rem;
+}
+
+.card .buttons button {
+  font-size: 1rem;
+  padding: 0.3rem 0.9rem;
+  margin: 5px;
+  box-shadow: 5px 5px 2px -1px rgba(0,0,0,0.75);
+-webkit-box-shadow: 5px 5px 2px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 5px 5px 2px -1px rgba(0,0,0,0.75);
+}
+
+.card .buttons button:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+.card .buttons button:active {
+  transform: scale(0.95);
+}
+
+/* footer */
+.footer {
+  width: 100%;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  padding: 1rem 0 1rem 0;
+}
+
+.footer p {
+  padding-left: 2rem;
+}
