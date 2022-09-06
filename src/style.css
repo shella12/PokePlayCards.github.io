@@ -40,7 +40,6 @@ nav ul li a{
 /* main */
 .main{
     padding: auto;
-    background-color: rgb(247, 151, 6);
 }
 .cards{
     display: grid;
@@ -79,6 +78,14 @@ nav ul li a{
         font-size: 1rem;
         padding: .3rem .9rem;
         margin: 5px;
+    }
+    .card .buttons button:hover{
+        color: #fff;
+        background-color: #000;
+        
+    }
+    .card .buttons button:active{
+        transform: scale(.95);
     }
         
 /* footer */
