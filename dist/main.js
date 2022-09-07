@@ -115,7 +115,27 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n//# sourceURL=webpack://capstone2/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _pokemons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pokemons */ \"./src/pokemons.js\");\n\n\n\n(0,_pokemons__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n//# sourceURL=webpack://capstone2/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/pokemons.js":
+/*!*************************!*\
+  !*** ./src/pokemons.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _unlike_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./unlike.png */ \"./src/unlike.png\");\n// https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0.\n\nconst cards=document.body.querySelector('.cards');\nconst pokemonImage=document.body.querySelector('.pokemon-img');\nconst pokemons=async ()=>{\nfetch('https://pokeapi.co/api/v2/pokemon?limit=10&offset=0').then(response => response.json())\n.then(data => data.results)\n.then(obj => Object.entries(obj))\n.then(arr =>{\n    arr.forEach(element => {\n        console.log(element[1]);\n        let pokemonName=element[1].name;\n        pokemonName= pokemonName[0].toUpperCase() + pokemonName.slice(1);\n        fetch(element[1].url).then(response =>response.json())\n        .then(data => data.sprites.other[\"official-artwork\"].front_default)\n        .then(src => {\n            const card=`<div class=\"card\">\n            <img class=\"pokemon-img\" src=\"${src}\" alt=\"Pokemon1\">\n            <div class=\"card-title\">\n            <h2>${pokemonName}</h2>\n            <img src=${_unlike_png__WEBPACK_IMPORTED_MODULE_0__} alt=\"heart icon for like\">\n            </div> \n            <p class=\"like-count\">0 Likes</p>\n            <div class=\"buttons\">\n                <button type=\"button\" class=\"comment\">Comments</button>\n                <button type=\"button\" class=\"reservations\">Reservations</button>\n            </div>\n            \n        </div>`;\n        cards.innerHTML += card;\n        }) \n       \n    })\n    \n})\n.catch(err =>{\n    console.log(\"Couldn't fetch pokemons\",err)\n})\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (pokemons);\n\n//# sourceURL=webpack://capstone2/./src/pokemons.js?");
+
+/***/ }),
+
+/***/ "./src/unlike.png":
+/*!************************!*\
+  !*** ./src/unlike.png ***!
+  \************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"5d66523f643ecf5753f5.png\";\n\n//# sourceURL=webpack://capstone2/./src/unlike.png?");
 
 /***/ })
 
