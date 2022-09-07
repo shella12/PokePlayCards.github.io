@@ -1,6 +1,6 @@
 import displayData from './displayComments.js';
 
-export default addComment1 = async (commmentObj, newid) => {
+const addComment1 = async (commmentObj, newid) => {
   const getApiComment = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/0YSAdjw9FalqCv0vGDYS/comments/';
   await fetch(getApiComment, {
     method: 'POST',
@@ -11,3 +11,4 @@ export default addComment1 = async (commmentObj, newid) => {
   });
   displayData(newid);
 };
+export default addComment1;

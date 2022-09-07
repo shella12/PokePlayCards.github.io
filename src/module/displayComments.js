@@ -1,4 +1,4 @@
-export default displayData = async (id) => {
+const displayData = async (id) => {
   const itemId = id;
   const pokemonApi = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/0YSAdjw9FalqCv0vGDYS/comments?item_id=${itemId}`;
   const response = await fetch(pokemonApi);
@@ -14,3 +14,4 @@ export default displayData = async (id) => {
     document.querySelector('.insights').value = '';
   }
 };
+export default displayData;
