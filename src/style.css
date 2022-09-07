@@ -39,6 +39,7 @@ nav ul li a {
 
 /* main */
 .cards {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1.5rem;
@@ -88,6 +89,38 @@ nav ul li a {
 
 .card .buttons button:active {
   transform: scale(0.95);
+}
+
+.popup{
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  top:0;
+  left: 1rem;
+  width: 95%;
+  z-index: 20;
+  padding: 3rem;
+  box-shadow: 5px 5px 2px -1px rgba(0,0,0,0.75);
+-webkit-box-shadow: 5px 5px 2px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 5px 5px 2px -1px rgba(0,0,0,0.75);
+
+}
+.popup img#pokemonImage{
+width: 200px;
+}
+.popup #cancelBtn{
+  align-self: flex-end;
+}
+.popup .power{
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+.popup .dimension{
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
 }
 
 /* footer */

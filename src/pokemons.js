@@ -1,5 +1,6 @@
 import unlike from './unlike.png';
 import detail from './pokemonDetail';
+
 const cards=document.body.querySelector('.cards');
 cards.addEventListener('click',(e)=>{
     if(e.target && e.target.className== 'pokemon-img'){
@@ -13,7 +14,6 @@ fetch('https://pokeapi.co/api/v2/pokemon?limit=20&offset=0').then(response => re
 .then(obj => Object.entries(obj))
 .then(arr =>{
     arr.forEach(element => {
-        console.log(element[1]);
         const id=Number(element[0]);
         let pokemonName=element[1].name;
         pokemonName= pokemonName[0].toUpperCase() + pokemonName.slice(1);
