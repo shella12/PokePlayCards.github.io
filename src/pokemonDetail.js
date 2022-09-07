@@ -7,6 +7,7 @@ popup.className='popup'
 cards.addEventListener('click',(e)=>{
     if(e.target && e.target.id== 'cancelBtn'){
         popup.style.display='none';
+        document.body.style.overflowY='scroll';
      }
  });
 const detail = (url)=>{
@@ -41,6 +42,7 @@ fetch(url).then(response => response.json())
     popup.innerHTML = popupCode;
     popup.style.display='flex';
     cards.appendChild(popup);
+    document.body.style.overflowY='hidden';
 })
 .catch(err => {
     console.log("Couldn't fetch Pokemons details ",err)
