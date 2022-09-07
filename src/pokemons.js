@@ -1,21 +1,27 @@
-// https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0.
 import unlike from './unlike.png';
+import detail from './pokemonDetail';
 const cards=document.body.querySelector('.cards');
-const pokemonImage=document.body.querySelector('.pokemon-img');
+cards.addEventListener('click',(e)=>{
+    if(e.target && e.target.className== 'pokemon-img'){
+        const url= `https://pokeapi.co/api/v2/pokemon/${e.target.id}`;
+          detail(url);
+     }
+ });
 const pokemons=async ()=>{
-fetch('https://pokeapi.co/api/v2/pokemon?limit=10&offset=0').then(response => response.json())
+fetch('https://pokeapi.co/api/v2/pokemon?limit=20&offset=0').then(response => response.json())
 .then(data => data.results)
 .then(obj => Object.entries(obj))
 .then(arr =>{
     arr.forEach(element => {
         console.log(element[1]);
+        const id=Number(element[0]);
         let pokemonName=element[1].name;
         pokemonName= pokemonName[0].toUpperCase() + pokemonName.slice(1);
         fetch(element[1].url).then(response =>response.json())
         .then(data => data.sprites.other["official-artwork"].front_default)
         .then(src => {
             const card=`<div class="card">
-            <img class="pokemon-img" src="${src}" alt="Pokemon1">
+            <img class="pokemon-img" id=${id+1} src="${src}" alt="Pokemon1">
             <div class="card-title">
             <h2>${pokemonName}</h2>
             <img src=${unlike} alt="heart icon for like">
@@ -36,6 +42,7 @@ fetch('https://pokeapi.co/api/v2/pokemon?limit=10&offset=0').then(response => re
 .catch(err =>{
     console.log("Couldn't fetch pokemons",err)
 })
+
 }
 
 export default pokemons;
