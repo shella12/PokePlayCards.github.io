@@ -43,7 +43,7 @@ const detail = (url) => {
       document.body.style.overflowY = 'hidden';
     })
     .catch((err) => {
-      console.log("Couldn't fetch Pokemons details ", err);
+      throw ("Couldn't fetch Pokemons details ", err);
     });
 };
 export default detail;

@@ -5,7 +5,7 @@ export const likeGet = async (id) => {
     .then((response) => response.json())
     .then((obj) => Object.entries(obj))
     .catch((err) => {
-      console.log('Failed to Post likes ', err);
+      throw ('Failed to Get likes ', err);
     });
   return data;
 };
@@ -23,7 +23,7 @@ const likesPost = async (id, target) => {
 
   })
     .catch((err) => {
-      console.log('Failed to Post likes ', err);
+      throw ('Failed to Post likes ', err);
     });
   target.src = likeImage;
 };

@@ -1,14 +1,10 @@
-import unlike from './unlike.png';
-import detail from './pokemonDetail.js';
+/**
+ * @jest-environment jsdom
+ */
+import fetch from 'node-fetch';
 
-let numberOfItems = 0;
-const cards = document.body.querySelector('.cards');
-cards.addEventListener('click', (e) => {
-  if (e.target && e.target.className === 'pokemon-img') {
-    const url = `https://pokeapi.co/api/v2/pokemon/${e.target.id}`;
-    detail(url);
-  }
-});
+let numberOfItems;
+
 const pokemons = async (url) => {
   await fetch(url).then((response) => response.json())
     .then((data) => data.results)
@@ -26,7 +22,6 @@ const pokemons = async (url) => {
             <img class="pokemon-img" id=${id + 1} src="${src}" alt="Pokemon1">
             <div class="card-title">
             <h2>${pokemonName}</h2>
-            <img id="likeId${id + 1}" class="likeBtn" src=${unlike} alt="heart icon for like">
             </div> 
             <p class="like-count" id="like-count${id + 1}">0 Likes</p>
             <div class="buttons">
