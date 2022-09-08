@@ -39,4 +39,4 @@ document.body.addEventListener('submit', (e) => {
     };
     addComment1(commmentObj, newid);
   }
-})
+});
