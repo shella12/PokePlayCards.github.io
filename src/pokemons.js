@@ -1,7 +1,7 @@
 import unlike from './unlike.png';
 import detail from './pokemonDetail.js';
 
-let numberOfItems=0;
+let numberOfItems = 0;
 const cards = document.body.querySelector('.cards');
 cards.addEventListener('click', (e) => {
   if (e.target && e.target.className === 'pokemon-img') {
@@ -14,7 +14,7 @@ const pokemons = async (url) => {
     .then((data) => data.results)
     .then((obj) => Object.entries(obj))
     .then((arr) => {
-      numberOfItems=arr.length;
+      numberOfItems = arr.length;
       arr.forEach((element) => {
         const id = Number(element[0]);
         let pokemonName = element[1].name;
@@ -42,7 +42,7 @@ const pokemons = async (url) => {
     .catch((err) => {
       console.log("Couldn't fetch pokemons", err);
     });
-    return numberOfItems;
-}
+  return numberOfItems;
+};
 
 export default pokemons;

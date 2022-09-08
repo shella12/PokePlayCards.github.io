@@ -23,7 +23,7 @@ document.body.addEventListener('click', (e) => {
       });
   }
 });
-pokemons('https://pokeapi.co/api/v2/pokemon?limit=20&offset=0').then(response => {
+pokemons('https://pokeapi.co/api/v2/pokemon?limit=20&offset=0').then((response) => {
   itemNumbers.innerHTML = `Pokemons(${response})`;
 });
 
