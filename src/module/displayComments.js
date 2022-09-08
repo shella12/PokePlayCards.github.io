@@ -9,7 +9,7 @@ const displayData = async (id) => {
     allComments.forEach((el) => {
       stringText += `<td>${el.creation_date} ${el.username}: ${el.comment}</td>`;
     });
-    document.querySelector('.comment-body').innerHTML += stringText;
+    document.querySelector('.comment-body').innerHTML = stringText;
     document.querySelector('.name').value = '';
     document.querySelector('.insights').value = '';
   }

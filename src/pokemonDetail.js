@@ -10,7 +10,7 @@ cards.addEventListener('click', (e) => {
     document.body.style.overflowY = 'scroll';
   }
 });
-const detail = (url) => {
+const detail = (url,dataid) => {
   fetch(url).then((response) => response.json())
     .then((data) => {
       let pokeName = data.name;
@@ -35,7 +35,7 @@ const detail = (url) => {
         <p>Weight: ${data.weight}</p>
         <p>Height: ${data.height}</p>
     </div>
-    <div class="comments" data-id="28">
+    <div class="comments" data-id=${dataid}>
     <h1 class="comment-h1">Comments (<span class="comments-count"></span>)</h1>
     <table>
       <tbody class="comment-body">

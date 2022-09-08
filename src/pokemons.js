@@ -6,7 +6,7 @@ const cards = document.body.querySelector('.cards');
 cards.addEventListener('click', (e) => {
   if (e.target && e.target.className === 'pokemon-img') {
     const url = `https://pokeapi.co/api/v2/pokemon/${e.target.id}`;
-    detail(url);
+    detail(url,e.target.id);
   }
 });
 const pokemons = async (url) => {
