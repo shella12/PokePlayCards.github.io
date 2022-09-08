@@ -25,16 +25,30 @@ pokemons('https://pokeapi.co/api/v2/pokemon?limit=20&offset=0').then((response) 
 });
 
 // StudentB work
-const form = document.querySelector('.form');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const newid = document.querySelector('.comments').getAttribute('data-id');
-  const names = document.querySelector('.name').value;
-  const insights = document.querySelector('.insights').value;
-  const commmentObj = {
-    item_id: newid,
-    username: names,
-    comment: insights,
-  };
-  addComment1(commmentObj, newid);
+document.body.addEventListener('submit', (e) => {
+  if (e.target && e.target.className === 'form') {
+    e.preventDefault();
+    const newid = document.querySelector('.comments').getAttribute('data-id');
+    const names = document.querySelector('.name').value;
+    const insights = document.querySelector('.insights').value;
+    const commmentObj = {
+      item_id: newid,
+      username: names,
+      comment: insights,
+    };
+    addComment1(commmentObj, newid);
+  }
 });
+// const form = document.querySelector('.form');
+// form.addEventListener('submit', (e) => {
+//   e.preventDefault();
+//   const newid = document.querySelector('.comments').getAttribute('data-id');
+//   const names = document.querySelector('.name').value;
+//   const insights = document.querySelector('.insights').value;
+//   const commmentObj = {
+//     item_id: newid,
+//     username: names,
+//     comment: insights,
+//   };
+//   addComment1(commmentObj, newid);
+// });
