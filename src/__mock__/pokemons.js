@@ -35,7 +35,7 @@ const pokemons = async (url) => {
       });
     })
     .catch((err) => {
-      console.log("Couldn't fetch pokemons", err);
+      throw ("Couldn't fetch pokemons", err);
     });
   return numberOfItems;
 };

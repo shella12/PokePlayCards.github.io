@@ -15,9 +15,9 @@ document.body.addEventListener('click', (e) => {
   if (e.target && e.target.className === 'likeBtn') {
     likesPost('0YSAdjw9FalqCv0vGDYS', e.target);
     likeGet('0YSAdjw9FalqCv0vGDYS');
-      const targetId = (e.target.id).split('likeId').slice(1);
-      const targetHeart=document.querySelector(`#like-count${targetId}`).innerHTML.split(" ");
-          document.querySelector(`#like-count${targetId}`).innerHTML = `${(Number(targetHeart[0]))+1} Likes`;
+    const targetId = (e.target.id).split('likeId').slice(1);
+    const targetHeart = document.querySelector(`#like-count${targetId}`).innerHTML.split(' ');
+    document.querySelector(`#like-count${targetId}`).innerHTML = `${(Number(targetHeart[0])) + 1} Likes`;
   }
 });
 pokemons('https://pokeapi.co/api/v2/pokemon?limit=20&offset=0').then((response) => {
