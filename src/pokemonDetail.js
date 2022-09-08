@@ -24,19 +24,33 @@ const detail = (url) => {
       });
 
       const popupCode = ` 
-    <img id="cancelBtn" src=${cancelBtnImage} alt="cancel popup image">
-    <img id="pokemonImage" src="${data.sprites.other['official-artwork'].front_default}" alt="Pokemon image">
-    <h1>${pokeName}</h1>
-    <div class="power">
-        <p>HP: ${data.base_experience}</p>
-        <p>Types: ${typeOfPoke}</p>
-    </div>
-    <div class="dimension">
-        <p>Weight: ${data.weight}</p>
-        <p>Height: ${data.height}</p>
-    </div>
-    <h2>Comments(2)</h2>
-`;
+        <img id="cancelBtn" src=${cancelBtnImage} alt="cancel popup image">
+        <img id="pokemonImage" src="${data.sprites.other['official-artwork'].front_default}" alt="Pokemon image">
+        <h1>${pokeName}</h1>
+        <div class="power">
+            <p>HP: ${data.base_experience}</p>
+            <p>Types: ${typeOfPoke}</p>
+        </div>
+        <div class="dimension">
+            <p>Weight: ${data.weight}</p>
+            <p>Height: ${data.height}</p>
+        </div>
+        <div class="comments" data-id="28">
+          <h1 class="comment-h1">Comments (<span class="comments-count"></span>)</h1>
+          <table>
+            <tbody class="comment-body">
+        
+            </tbody>
+          </table>
+          <form class="form">
+            <label for="name"></label>
+            <input type="text" class="name" placeholder="your name">
+            <label for="insights"></label>
+            <input type="text" class="insights" placeholder="your insights">
+            <button type="submit" class="formButton">Comment</button>
+          </form>
+        </div>
+    `;
       popup.innerHTML = popupCode;
       popup.style.display = 'flex';
       cards.appendChild(popup);
