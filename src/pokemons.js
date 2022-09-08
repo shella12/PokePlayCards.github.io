@@ -1,6 +1,7 @@
 import unlike from './unlike.png';
 import detail from './pokemonDetail.js';
 
+let numberOfItems=0;
 const cards = document.body.querySelector('.cards');
 cards.addEventListener('click', (e) => {
   if (e.target && e.target.className === 'pokemon-img') {
@@ -8,11 +9,12 @@ cards.addEventListener('click', (e) => {
     detail(url);
   }
 });
-const pokemons = async () => {
-  fetch('https://pokeapi.co/api/v2/pokemon?limit=20&offset=0').then((response) => response.json())
+const pokemons = async (url) => {
+  await fetch(url).then((response) => response.json())
     .then((data) => data.results)
     .then((obj) => Object.entries(obj))
     .then((arr) => {
+      numberOfItems=arr.length;
       arr.forEach((element) => {
         const id = Number(element[0]);
         let pokemonName = element[1].name;
@@ -40,6 +42,7 @@ const pokemons = async () => {
     .catch((err) => {
       console.log("Couldn't fetch pokemons", err);
     });
-};
+    return numberOfItems;
+}
 
 export default pokemons;

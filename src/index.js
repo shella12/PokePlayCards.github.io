@@ -4,7 +4,6 @@ import pokemons from './pokemons.js';
 import likesPost, { likeGet } from './likes.js';
 
 const itemNumbers = document.getElementById('udateItemNumbers');
-itemNumbers.innerHTML = 'Pokemons(20)';
 likeGet('0YSAdjw9FalqCv0vGDYS')
   .then((data) => {
     data.forEach((element) => {
@@ -24,7 +23,9 @@ document.body.addEventListener('click', (e) => {
       });
   }
 });
-pokemons();
+pokemons('https://pokeapi.co/api/v2/pokemon?limit=20&offset=0').then(response => {
+  itemNumbers.innerHTML = `Pokemons(${response})`;
+});
 
 // StudentB work
 const form = document.querySelector('.form');
