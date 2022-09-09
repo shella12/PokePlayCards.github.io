@@ -1,5 +1,5 @@
 import cancelBtnImage from './cancel.png';
-
+import displayData from './module/displayComments.js';
 const cards = document.body.querySelector('.cards');
 const popup = document.createElement('div');
 popup.className = 'popup';
@@ -7,10 +7,10 @@ popup.className = 'popup';
 cards.addEventListener('click', (e) => {
   if (e.target && e.target.id === 'cancelBtn') {
     popup.style.display = 'none';
-    //document.body.style.overflowY = 'scroll';
+    document.body.style.overflowY = 'scroll';
   }
 });
-const detail = (url, dataid) => {
+const detail = (url,dataid) => {
   fetch(url).then((response) => response.json())
     .then((data) => {
       let pokeName = data.name;
@@ -41,7 +41,7 @@ const detail = (url, dataid) => {
       <tbody class="comment-body">
       </tbody>
     </table>
-    
+    <div class="popup"></div>
     <form class="form">
       <label for="name"></label>
       <input type="text" class="name" placeholder="your name">
@@ -51,6 +51,7 @@ const detail = (url, dataid) => {
     </form>
   </div>
 `;
+      displayData(dataid);
       popup.innerHTML = popupCode;
       popup.style.display = 'flex';
       cards.appendChild(popup);
