@@ -1,4 +1,5 @@
 import cancelBtnImage from './cancel.png';
+import displayData from './module/displayComments.js';
 
 const cards = document.body.querySelector('.cards');
 const popup = document.createElement('div');
@@ -10,7 +11,7 @@ cards.addEventListener('click', (e) => {
     document.body.style.overflowY = 'scroll';
   }
 });
-const detail = (url) => {
+const detail = (url, dataid) => {
   fetch(url).then((response) => response.json())
     .then((data) => {
       let pokeName = data.name;
@@ -35,8 +36,23 @@ const detail = (url) => {
         <p>Weight: ${data.weight}</p>
         <p>Height: ${data.height}</p>
     </div>
-    <h2>Comments(2)</h2>
+    <div class="comments" data-id=${dataid}>
+    <h1 class="comment-h1">Comments (<span class="comments-count"></span>)</h1>
+    <table>
+      <tbody class="comment-body">
+      </tbody>
+    </table>
+    <div class="popup"></div>
+    <form class="form">
+      <label for="name"></label>
+      <input type="text" class="name" placeholder="your name">
+      <label for="insights"></label>
+      <input type="text" class="insights" placeholder="your insights">
+      <button type="submit" class="formButton">Comment</button>
+    </form>
+  </div>
 `;
+      displayData(dataid);
       popup.innerHTML = popupCode;
       popup.style.display = 'flex';
       cards.appendChild(popup);

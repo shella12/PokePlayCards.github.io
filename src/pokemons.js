@@ -4,11 +4,12 @@ import detail from './pokemonDetail.js';
 let numberOfItems = 0;
 const cards = document.body.querySelector('.cards');
 cards.addEventListener('click', (e) => {
-  if (e.target && e.target.className === 'pokemon-img') {
+  if (e.target && e.target.className === 'comment') {
     const url = `https://pokeapi.co/api/v2/pokemon/${e.target.id}`;
-    detail(url);
+    detail(url, e.target.id);
   }
 });
+
 const pokemons = async (url) => {
   await fetch(url).then((response) => response.json())
     .then((data) => data.results)
@@ -30,11 +31,10 @@ const pokemons = async (url) => {
             </div> 
             <p class="like-count" id="like-count${id + 1}">0 Likes</p>
             <div class="buttons">
-                <button type="button" class="comment">Comments</button>
-                <button type="button" class="reservations">Reservations</button>
+              <button type="button" id="${id + 1}" class="comment">Comments</button>
+              <button type="button" class="reservations">Reservations</button>
             </div>
-            
-        </div>`;
+          </div>`;
             cards.innerHTML += card;
           });
       });
