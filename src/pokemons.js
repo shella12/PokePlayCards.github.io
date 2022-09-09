@@ -10,12 +10,6 @@ cards.addEventListener('click', (e) => {
   }
 });
 
-cards.addEventListener('click', (e) => {
-  if (e.target && e.target.id === 'cancelBtn') {
-    popup.style.display = 'none';
-    document.body.style.overflowY = 'scroll';
-  }
-});
 const pokemons = async (url) => {
   await fetch(url).then((response) => response.json())
     .then((data) => data.results)
@@ -50,6 +44,5 @@ const pokemons = async (url) => {
     });
   return numberOfItems;
 };
-
 
 export default pokemons;
