@@ -1,18 +1,20 @@
+/**
+ * @jest-environment jsdom
+ */
+import fetch from 'node-fetch';
 const displayData = async (id) => {
   const itemId = id;
-  const commentBody = document.querySelector('.comment-body');
   const pokemonApi = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/0YSAdjw9FalqCv0vGDYS/comments?item_id=${itemId}`;
   const response = await fetch(pokemonApi);
   if (response.ok) {
     const allComments = await response.json();
-    document.querySelector('.comments-count').innerHTML = allComments.length;
-    let stringText = '';
+    
+    let stringText = "";
     allComments.forEach((el) => {
       stringText += `<td>${el.creation_date} ${el.username}: ${el.comment}</td>`;
     });
-    commentBody.innerHTML = stringText;
-    document.querySelector('.name').value = '';
-    document.querySelector('.insights').value = '';
+    
   }
+  return allComments.length;
 };
-export default displayData;
+module.exports = displayData;

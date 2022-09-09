@@ -30,7 +30,7 @@ const pokemons = async (url) => {
             </div>
             
         </div>`;
-            cards.innerHTML += card;
+           
           });
       });
     })

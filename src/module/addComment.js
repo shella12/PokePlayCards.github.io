@@ -11,4 +11,5 @@ const addComment1 = async (commmentObj, newid) => {
   });
   displayData(newid);
 };
+
 export default addComment1;
