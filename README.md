@@ -2,55 +2,75 @@
 
 # Project Name
 
-> Description the project.
+> Pokemon Website.
 
+## Description
+
+- This project is built using PokeAPI for pokemons and Involvement API for interactions.
+- In this project you can view different Pokemons and their abilities.
+- You can give a like to your favourite pokemons.
+- You can also share your thoughts on the pokemon by leaving comments on it.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+- HTML, CSS, JavaScript
+- Webpack
+- Jest
+- RESTFUL APIs
 
 ### Prerequisites
 
-### Setup
+- Vistual Studio Code
+- Browser (Firefox / Google Chrome)
+- Node.js (v6.11.2+)
+- linters
 
-### Install
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+## Install Dependencies(with following Command)
+
+- npm install --save -dev
+
+## Build webpack
+
+- run command npm run build
+
+## Start server
+
+- npm start
+
+## To test the app run following command
+
+- npm test
 
 ### Usage
 
-### Run tests
+Showcase Pokemons and their abilites. You can like and post comments on each pokemon.
 
-### Deployment
+## Feature Video
 
+Click this [Video](https://drive.google.com/file/d/1a7RdEyUAWa7g6i99kc4qzchwkugp2BVP/view?usp=sharing) to see a descriptive video about the features of the website 
 
+## Live Demo
+
+Click here to see the [Live Demo](https://shella12.github.io/Pokemon.github.io/dist/) of the website 
+
+![](./app_screenshot.png)
 
 ## Authors
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@shella12](https://github.com/shella12)
+- Twitter: [@Ayesha Arshad](https://twitter.com/AyeshaA03712974)
+- LinkedIn: [Ayesha Arshad](https://www.linkedin.com/in/ayesha-arshad-a690a015a/)
 
-👤 **Author2**
+**Author2**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@altontonn](https://github.com/altontonn)
+- Gmail: [Newton Alumasa](altontonnalumasa@gmail.com)
 
 ## 🤝 Contributing
 
@@ -61,12 +81,6 @@ Feel free to check the [issues page](../../issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 
