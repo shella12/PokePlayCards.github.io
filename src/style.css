@@ -39,10 +39,10 @@ nav ul li a {
 
 /* comments */
 .comments {
-  width: 50%;
-  height: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .comment-h1 {
@@ -80,6 +80,15 @@ nav ul li a {
 
 .comments button:hover {
   cursor: pointer;
+}
+
+table tr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:250px;
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 /* main */
@@ -144,9 +153,9 @@ nav ul li a {
   align-items: center;
   top: 0;
   left: 0;
-  transform: translate(50%, 0);
-  width: 50%;
-  height: 100%;
+  transform: translate(5%, 15px);
+  width: 90%;
+  height: 95vh;
   z-index: 20;
   padding: 3rem;
   border: 1px solid black;
@@ -173,14 +182,6 @@ nav ul li a {
   display: flex;
   gap: 2rem;
   justify-content: space-between;
-}
-
-table tr {
-  display: flex;
-  flex-direction: column;
-  width:250px;
-  max-height: 200px;
-  overflow-y: auto;
 }
 
 /* footer */
