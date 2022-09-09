@@ -1,5 +1,5 @@
 import cancelBtnImage from './cancel.png';
-
+import displayData from './module/displayComments.js';
 const cards = document.body.querySelector('.cards');
 const popup = document.createElement('div');
 popup.className = 'popup';
@@ -39,7 +39,6 @@ const detail = (url,dataid) => {
     <h1 class="comment-h1">Comments (<span class="comments-count"></span>)</h1>
     <table>
       <tbody class="comment-body">
-  
       </tbody>
     </table>
     <div class="popup"></div>
@@ -52,6 +51,7 @@ const detail = (url,dataid) => {
     </form>
   </div>
 `;
+      displayData(dataid);
       popup.innerHTML = popupCode;
       popup.style.display = 'flex';
       cards.appendChild(popup);
