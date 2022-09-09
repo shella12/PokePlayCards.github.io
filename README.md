@@ -70,7 +70,8 @@ Click here to see the [Live Demo](https://shella12.github.io/Pokemon.github.io/d
 **Author2**
 
 - GitHub: [@altontonn](https://github.com/altontonn)
-- Gmail: [Newton Alumasa](altontonnalumasa@gmail.com)
+- Twitter: [@AlumasaNewton](https://twitter.com/AlumasaNewton)
+- LinkedIn: [Newton Alumasa](https://www.linkedin.com/in/newton-alumasa-7a05a21a2/)
 
 ## 🤝 Contributing
 
