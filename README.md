@@ -55,7 +55,7 @@ Click this [Video](https://drive.google.com/file/d/1a7RdEyUAWa7g6i99kc4qzchwkugp
 
 ## Live Demo
 
-Click here to see the [Live Demo](https://shella12.github.io/Pokemon.github.io/dist/) of the website 
+Click here to see the [Live Demo](https://shella12.github.io/PokePlayCards.github.io/dist/) of the website 
 
 ![](./app_screenshot.png)
 
